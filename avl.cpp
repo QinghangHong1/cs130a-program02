@@ -44,16 +44,8 @@ int main(int argc, char* argv[]){
                 if(content[1] == "tree"){
                     t.preOrder();
                     cout << endl;
-                }else if(content[1] == "left-left"){
-                    printRotationRange(t, "left-left");
-                }else if(content[1] == "left-right"){
-                    printRotationRange(t, "left-right");
-
-                }else if(content[1] == "right-left"){
-                    printRotationRange(t, "right-left");
-                    
-                }else if(content[1] == "right-right"){
-                    printRotationRange(t, "right-right");
+                }else if(content[1] == "left-left" || content[1] == "left-right" || content[1] == "right-left" || content[1] == "right-right"){
+                    printRotationRange(t, content[1]);
                 }else{
                     cout << "cannot recognize" << endl;
                 }
@@ -61,11 +53,8 @@ int main(int argc, char* argv[]){
                 cout << "something strange" << endl;
             }
         }
-        
     }
-    
     return 0;
-    
 }
 
 void insert(vector<string> content, Tree& t){

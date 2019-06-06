@@ -204,7 +204,7 @@ void Tree::leafNodes(vector<int>& leafList){
     leafNodesHelper(root, leafList);
 }
 void Tree::findRotationHelper(Node* root, vector<pair<int, int> >& ll,  vector<pair<int, int> >& lr, vector<pair<int, int> >& rl, vector<pair<int, int> >& rr, int f1, int f2, int max, int min) const{
-    //Precondition: the data is in one of the leaves
+    
     if(!root){
         return;
     }

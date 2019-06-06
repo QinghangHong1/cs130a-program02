@@ -1,0 +1,7 @@
+insert 444 222 111 333 111
+lookup 444 222 65 89
+print tree
+print left-right
+print right-left
+print right-right
+print left-left
