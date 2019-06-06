@@ -8,6 +8,9 @@ using namespace std;
 Tree::Tree(){
     root = 0;
 }
+Node* Tree::getRoot(){
+    return root;
+}
 int Tree::height(Node* parent) const{
     if(parent == NULL){
         return -1;

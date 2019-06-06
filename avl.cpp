@@ -42,6 +42,9 @@ int main(int argc, char* argv[]){
                 lookup(content, t);
             }else if(content[0] == "print"){
                 if(content[1] == "tree"){
+                    if(t.getRoot() == NULL){
+                        cout << "Null" << endl;
+                    }
                     t.preOrder();
                     cout << endl;
                 }else if(content[1] == "left-left" || content[1] == "left-right" || content[1] == "right-left" || content[1] == "right-right"){

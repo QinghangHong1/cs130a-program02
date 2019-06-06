@@ -1,5 +1,4 @@
-insert 2 1 4 3
+lookup 1 2 3
 print left-left
-
-insert 0
+print right-right
 print tree

@@ -34,7 +34,7 @@ class Tree{
         void leafNodesHelper(Node* root, vector<int>& leafList);
         void findRotationHelper(Node* root, vector<pair<int, int> >& ll,  vector<pair<int, int> >& lr, vector<pair<int, int> >& rl, vector<pair<int, int> >& rr, int f1, int f2, int max, int min) const;
         void findRotation(vector<pair<int, int> >& ll,  vector<pair<int, int> >& lr, vector<pair<int, int> >& rl, vector<pair<int, int> >& rr) const;
-
+        Node* getRoot();
         ~Tree();
 
 };
