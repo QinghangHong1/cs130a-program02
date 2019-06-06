@@ -50,6 +50,9 @@ Node* Tree::rlRotate(Node*& parent){
 }
 int Tree::heightDifference(Node* parent) const{
     //return postive if left subtree is taller, negative if right subtree is taller
+    if(parent == NULL){
+        return 0;
+    }
     return height(parent -> left) - height(parent -> right);
 }
 Node* Tree::insertHelper(Node *parent, int value, bool& inserted, int& rotation, int& numVisited){
