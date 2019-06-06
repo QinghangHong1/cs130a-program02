@@ -7,7 +7,7 @@
 using namespace std;
 
 void insert(vector<string> content,Tree& t);
-void lookup(vector<string> content, Tree t);
+void lookup(vector<string> content, const Tree &t);
 void formatResult(int visitedNum, int totalNum, int rotations);
 void printRotationRange(const Tree& t, string type);
 void printRotationHelper(vector<pair<int, int> > v, string type);
@@ -81,7 +81,7 @@ void insert(vector<string> content, Tree& t){
  
     formatResult(visitNum, content.size() - 1, rotation);
 }
-void lookup(vector<string> content, Tree t){
+void lookup(vector<string> content, const Tree& t){
     int visitedNum = 0;
     int existNum = 0;
     vector<int> existElements;

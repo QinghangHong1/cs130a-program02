@@ -71,7 +71,7 @@ Node* Tree::insertHelper(Node *parent, int value, bool& inserted, int& rotation,
         parent = balance(parent, rotation);
         
     }else{
-        
+        numVisited ++;
         inserted = false;
     }
     return parent;
@@ -278,52 +278,7 @@ void Tree::findRotationHelper(Node* root, vector<pair<int, int> >& ll,  vector<p
             // no rotation 
             return;
         }
-    }
-    // if((root -> data > data && heightDifference(root) == 1)){
-    //     // left tree is taller
-    //     // go to the taller tree (left)
-    //     f1 = 1; // 1 : left   -1 : right
-    //     f2 = 0;
-    //     max = root -> data - 1;
-    //     findLeafHelper(root -> left, data, ll, lr, rl, rr, f1, f2, max , min);
-    // }else if((root -> data < data && heightDifference(root) == -1)){
-    //     // right tree is taller
-    //     // go to the taller tree (right)
-    //     f1 = -1;
-    //     f2 = 0;       
-    //     min = root -> data + 1;
-    //     findLeafHelper(root -> left, data, ll, lr, rl, rr, f1, f2, max , min);
-    // }else if(root -> data < data && heightDifference(root) == 1){
-    //     // left tree is taller
-    //     // go to the shorter tree (right)
-    //     f1 = 0;
-    //     f2 = 0;
-    //     min = root -> data + 1;
-    //     findLeafHelper(root -> left, data, ll, lr, rl, rr, f1, f2, max , min);
-    // }else if(root -> data > data && heightDifference(root) == -1){
-    //     // right tree is taller
-    //     // go to the shorter tree (left)
-    //     f1 = 0;
-    //     f2 = 0;
-    //     max = root -> data - 1;
-    //     findLeafHelper(root -> left, data, ll, lr, rl, rr, f1, f2, max , min);    
-    // }else if(root -> data > data && heightDifference(root) == 0){
-    //     // equal height difference
-    //     // go to the left
-    //     if(f2 == 0){
-    //         f2 = 1;
-    //     }
-    //     max = root -> data - 1;
-    //     findLeafHelper(root -> left, data, ll, lr, rl, rr, f1, f2, max , min);    
-    // }else if(root -> data < data && heightDifference(root) == 0){
-    //     // go to the right
-    //     if(f2 == 0){
-    //         f2 = -1;
-    //     }
-    //     min = root -> data + 1;
-    //     findLeafHelper(root -> left, data, ll, lr, rl, rr, f1, f2, max , min);
-    
-    
+    } 
 }
 void Tree::findRotation(vector<pair<int, int> >& ll,  vector<pair<int, int> >& lr, vector<pair<int, int> >& rl, vector<pair<int, int> >& rr) const{
     findRotationHelper(root, ll, lr, rl, rr, 0, 0, 2147483647, -2147483648);
